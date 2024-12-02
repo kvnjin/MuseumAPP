@@ -1,0 +1,4 @@
+.PaintingDisplay{
+    display: flex;
+    flex-direction: column;
+}
