@@ -1,4 +1,11 @@
-.PaintingDisplay{
+.paintingDisplay{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 40%;
+    flex-wrap: wrap;
+}
+
+.paintingDisplay img{
+    width: 100%;
+    height: 100%;
 }

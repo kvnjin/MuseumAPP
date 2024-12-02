@@ -1,11 +1,11 @@
-import PaintingDisplay from './components/PaintingDisplay'
 import './App.css'
+import ImageContainer from './components/ImageContainer'
 
 function App() {
 
   return (
     <>
-      <PaintingDisplay></PaintingDisplay>
+      <ImageContainer></ImageContainer>
     </>
   )
 }
