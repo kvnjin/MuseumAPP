@@ -1,34 +1,20 @@
 import styles from '/src/css/PaintingDisplay.module.css';
-import { useEffect, useState } from 'react';
-
-export default function Painting(){
-  const [painting, setPainting] = useState([])
-  
-  useEffect(() => {
-    fetch('/src/mockAPI/infosMockAPI.json')
-    .then(response => response.json())
-    .then(data => setPainting(data.artObjects))
-    .catch(error => console.log(error))
-  },[]);
+// import { useEffect, useState } from 'react';
+import data from '/public/infosMockAPI.json';
 
 
 function PaintingDisplay(){
-
-  return painting.map((e) => {
     return (
       <>
-       <div className={styles.paintingDisplay}>
-        <img src={e.webImage.url}/>
-        <p className={styles.title}>{e.title}</p>
-        <p className={styles.author}>{e.principalOrFirstMaker}</p>
-      </div>
+      { data.artObjects.map((e) => (
+        <div key={e.id} className={styles.paintingDisplay}>
+          <img src={e.webImage.url}/>
+          <p className={styles.title}>{e.title}</p>
+          <p className={styles.author}>{e.principalOrFirstMaker}</p>
+        </div>
+       ))}  
       </>
-     
   )
-});
-} 
-return ( 
-  <PaintingDisplay/>
-);
-
 }
+
+export default PaintingDisplay;
