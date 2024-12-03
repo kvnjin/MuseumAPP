@@ -5,7 +5,7 @@ export default function Painting(){
   const [painting, setPainting] = useState([])
   
   useEffect(() => {
-    fetch('/public/infosMockAPI.json')
+    fetch('/src/mockAPI/infosMockAPI.json')
     .then(response => response.json())
     .then(data => setPainting(data.artObjects))
     .catch(error => console.log(error))
