@@ -1,11 +1,11 @@
 import './App.css'
-import ImageContainer from './components/ImageContainer'
+import ImageContainer from './components/ImageContainer.jsx'
 
 function App() {
 
   return (
     <>
-      <ImageContainer></ImageContainer>
+      <ImageContainer/>
     </>
   )
 }

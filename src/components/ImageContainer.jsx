@@ -1,9 +1,9 @@
 import PaintingDisplay from "./PaintingDisplay";
-import styles from '/src/css/PaintingDisplay.module.css';
+import styles from '/src/css/ImageContainer.module.css';
 
 function ImageContainer() {
   return (
-    <div className={styles.ImageContainer}>
+    <div className={styles.imageContainer}>
         <PaintingDisplay />
         <PaintingDisplay />
     </div>
