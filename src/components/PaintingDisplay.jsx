@@ -6,14 +6,14 @@ function PaintingDisplay() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1); 
   const itemsPerPage = 5; 
-
+  const apiKey = import.meta.env.VITE_API_KEY
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `https://www.rijksmuseum.nl/api/en/collection?key=pYwXfSZ3&ps=100`
+          `https://www.rijksmuseum.nl/api/en/collection?key=${apiKey}&ps=100`
         );
         const result = await response.json();
         setData(result.artObjects || []); 
