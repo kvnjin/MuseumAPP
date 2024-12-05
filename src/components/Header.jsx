@@ -1,7 +1,9 @@
 import styles from '../css/Header.module.css';
 // import { useEffect, useState } from 'react';
 
-function Header({}){
+function Header({ searchData }) {
+
+  
     return (
         <div className={styles.header}>
         <div className={styles.siteTitle}>

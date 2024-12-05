@@ -4,7 +4,7 @@ import Header from "./Header";
 import Pagination from "./Pagination";
 import { useState } from "react";
 
-function ImageContainer({data}) {
+function ImageContainer({data, searchData}) {
   
   const [currentPage, setCurrentPage] = useState(1); 
   const itemsPerPage = 5; 
@@ -17,7 +17,9 @@ function ImageContainer({data}) {
   return (
     <div className={styles.imageContainer}>
 
-      <Header/>
+      <Header
+        searchData={searchData}
+      />
 
       <PaintingDisplay
         currentItems={currentItems}
