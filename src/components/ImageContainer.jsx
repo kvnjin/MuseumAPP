@@ -19,6 +19,13 @@ function ImageContainer({data, onSearch }) {
   };
 
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
   
   return (
     <div className={styles.imageContainer}>
@@ -35,6 +42,7 @@ function ImageContainer({data, onSearch }) {
         currentPage={currentPage}
         totalPages={totalPages}
         setCurrentPage={setCurrentPage}
+        scrollToTop={scrollToTop}
       />
       
     </div>

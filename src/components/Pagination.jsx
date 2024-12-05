@@ -2,32 +2,41 @@ import React, { useState } from "react";
 import styles from '../css/Pagination.module.css';
 
 
-function Pagination({ currentPage, totalPages, setCurrentPage }) {
+function Pagination({ currentPage, totalPages, setCurrentPage, scrollToTop }) {
+
+    const goToTop = () => {
+        scrollToTop(currentPage);
+    };
 
     const goToNextPage = () => {
         if (currentPage < totalPages) {
         setCurrentPage(currentPage + 1);
+        goToTop(currentPage);
         }
     };
 
     const goToPreviousPage = () => {
         if (currentPage > 1) {
         setCurrentPage(currentPage - 1);
+        goToTop(currentPage);
         }
     };
 
     const goToFirstPage = () => {
         if (currentPage > 1) {
         setCurrentPage(1);
+        goToTop(currentPage);
         }
     };
 
     const goToLastPage = () => {
         if (currentPage < totalPages) {
         setCurrentPage(totalPages);
+        goToTop(currentPage);
         }
     }
 
+   
     return (
         <div className={styles.pagination}>
         <button onClick={goToFirstPage} disabled={currentPage === 1}>
@@ -45,6 +54,7 @@ function Pagination({ currentPage, totalPages, setCurrentPage }) {
         <button onClick={goToLastPage} disabled={currentPage === totalPages}>
           Last
         </button>
+        <button onClick={goToTop}>up</button>
       </div>
     );
 
