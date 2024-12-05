@@ -54,7 +54,6 @@ function Pagination({ currentPage, totalPages, setCurrentPage, scrollToTop }) {
         <button onClick={goToLastPage} disabled={currentPage === totalPages}>
           Last
         </button>
-        <button onClick={goToTop}>up</button>
       </div>
     );
 
