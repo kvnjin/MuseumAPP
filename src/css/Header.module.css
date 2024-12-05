@@ -17,9 +17,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: row;
-    flex-wrap: wrap;
-    margin: 20px; */
     font-size: 24px;
     border-radius: 10px;
 }
@@ -42,7 +39,6 @@
 }
 
 .searchBtn{
-    /* border: 1px solid #fff; */
     background-color: #ffffff;
     padding: 8px 12px;
     border-radius: 5px;
