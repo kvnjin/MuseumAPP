@@ -21,6 +21,18 @@
     flex-wrap: wrap;
     margin: 20px; */
     font-size: 24px;
+    border-radius: 10px;
+}
+
+.searchBar::placeholder{
+    font-size: 16px;
+    align-items: center;
+}
+
+
+.searchBar:hover{
+    border-color: rgb(164, 164, 164);
+      
 }
 
 .search{
@@ -36,4 +48,5 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 10px;
 }

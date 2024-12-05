@@ -20,7 +20,7 @@ function Header({ onSearch }) {
       <div className={styles.search}>
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="For ArtWorks"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)} 
           className={styles.searchBar}
