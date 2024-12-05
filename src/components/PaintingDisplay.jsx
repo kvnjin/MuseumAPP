@@ -46,8 +46,8 @@ function PaintingDisplay({ currentItems }) {
                 src={selectedImage.webImage.url}
                 className={styles.fullscreenImage}
               />
-              <p className={styles.popupTitle}>{selectedImage.title}</p>
-              <p className={styles.popupAuthor}>{selectedImage.principalOrFirstMaker}</p>
+              <p className={styles.popupTitle}>{selectedImage.longTitle}</p>
+              {/* <p className={styles.popupAuthor}>{selectedImage.principalOrFirstMaker}</p> */}
           </div>
         )}
       </div>
