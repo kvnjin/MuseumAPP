@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.siteTitle {
+    align-items: center;
+    font-style: italic bold;
+    font-size: 48px;
+}
+
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px; */
+    font-size: 24px;
+}
+
+.search{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.clearBtn{
+    /* border: 1px solid; */
+    background-color: #5c5c5c;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.searchBtn{
+    /* border: 1px solid #fff; */
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
