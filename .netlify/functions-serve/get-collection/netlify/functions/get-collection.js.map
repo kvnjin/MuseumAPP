@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../../Desktop/SeminaireReactAPP/museum-app/netlify/functions/get-collection.js"],
-  "sourceRoot": "C:/Users/kevin/AppData/Local/Temp/tmp-21344-jEHXZX9fRNF8",
+  "sourceRoot": "C:/Users/kevin/AppData/Local/Temp/tmp-7480-NpXRuQ8WtAoZ",
   "sourcesContent": ["export const handler = async (event, context) => {\r\n    try {\r\n        const params = event.queryStringParameters;\r\n        const apiKey = process.env.VITE_API_KEY;\r\n        const searchTerm = params.q || '';\r\n        const query = searchTerm ? `&q=${searchTerm}` : '';\r\n        const response = await fetch(`https://www.rijksmuseum.nl/api/en/collection?key=${apiKey}&ps=${params.ps}&${query}`);\r\n        const result = await response.json();\r\n        // console.log(result);\r\n        return {\r\n            statusCode: 200,\r\n            body: JSON.stringify(result)\r\n        }\r\n    }\r\n    catch (error) {\r\n        console.error(\"Erreur:\", error);\r\n        return {\r\n            statusCode: 500,\r\n            body: JSON.stringify({ error: 'Failed fetching data' })\r\n        }\r\n    }       \r\n        \r\n}"],
   "mappings": ";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,IAAM,UAAU,OAAO,OAAO,YAAY;AAC7C,MAAI;AACA,UAAM,SAAS,MAAM;AACrB,UAAM,SAAS,QAAQ,IAAI;AAC3B,UAAM,aAAa,OAAO,KAAK;AAC/B,UAAM,QAAQ,aAAa,MAAM,UAAU,KAAK;AAChD,UAAM,WAAW,MAAM,MAAM,oDAAoD,MAAM,OAAO,OAAO,EAAE,IAAI,KAAK,EAAE;AAClH,UAAM,SAAS,MAAM,SAAS,KAAK;AAEnC,WAAO;AAAA,MACH,YAAY;AAAA,MACZ,MAAM,KAAK,UAAU,MAAM;AAAA,IAC/B;AAAA,EACJ,SACO,OAAO;AACV,YAAQ,MAAM,WAAW,KAAK;AAC9B,WAAO;AAAA,MACH,YAAY;AAAA,MACZ,MAAM,KAAK,UAAU,EAAE,OAAO,uBAAuB,CAAC;AAAA,IAC1D;AAAA,EACJ;AAEJ;",
   "names": []
