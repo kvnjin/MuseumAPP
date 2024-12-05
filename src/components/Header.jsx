@@ -1,21 +1,36 @@
+import { useState } from 'react';
 import styles from '../css/Header.module.css';
-// import { useEffect, useState } from 'react';
 
-function Header({ searchData }) {
+function Header({ onSearch }) {
+  const [searchTerm, setSearchTerm] = useState('');
 
-  
-    return (
-        <div className={styles.header}>
-        <div className={styles.siteTitle}>
-          <p>Rijksmuseum</p>
-        </div>
-        <div className={styles.search}>
-        <input type="text" placeholder='Search...' className={styles.searchBar}/>
-        <button className={styles.searchBtn}>Search</button>
-        <button className={styles.clearBtn}>Clear</button>
-        </div>
+  const handleSearch = () => {
+    if (onSearch) {
+      onSearch(searchTerm);
+    }
+  };
+
+
+
+  return (
+    <div className={styles.header}>
+      <div className={styles.siteTitle}>
+        <p>Rijksmuseum</p>
       </div>
-    )
+      <div className={styles.search}>
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)} 
+          className={styles.searchBar}
+        />
+        <button onClick={handleSearch} className={styles.searchBtn}>
+          Search
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default Header;

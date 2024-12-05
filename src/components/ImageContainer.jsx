@@ -4,7 +4,7 @@ import Header from "./Header";
 import Pagination from "./Pagination";
 import { useState } from "react";
 
-function ImageContainer({data, searchData}) {
+function ImageContainer({data, onSearch }) {
   
   const [currentPage, setCurrentPage] = useState(1); 
   const itemsPerPage = 5; 
@@ -13,12 +13,18 @@ function ImageContainer({data, searchData}) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentItems = data.slice(startIndex, endIndex);
+  const handleSearch = (searchTerm) => {
+    onSearch(searchTerm);
+    setCurrentPage(1); 
+  };
+
+
   
   return (
     <div className={styles.imageContainer}>
 
       <Header
-        searchData={searchData}
+        onSearch={handleSearch}
       />
 
       <PaintingDisplay

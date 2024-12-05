@@ -26,7 +26,9 @@ var handler = async (event, context) => {
   try {
     const params = event.queryStringParameters;
     const apiKey = process.env.VITE_API_KEY;
-    const response = await fetch(`https://www.rijksmuseum.nl/api/en/collection?key=${apiKey}&ps=${params.ps}`);
+    const searchTerm = params.q || "";
+    const query = searchTerm ? `&q=${searchTerm}` : "";
+    const response = await fetch(`https://www.rijksmuseum.nl/api/en/collection?key=${apiKey}&ps=${params.ps}&${query}`);
     const result = await response.json();
     return {
       statusCode: 200,
